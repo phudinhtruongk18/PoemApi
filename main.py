@@ -5,10 +5,7 @@ from models import Poem
 import random
 from fastapi.middleware.cors import CORSMiddleware
 
-origins = [
-    "https://phudinhtruongk18.github.io/",
-    "http://localhost:5500/"
-]
+origins = ["*"]
 
 app = FastAPI()
 
