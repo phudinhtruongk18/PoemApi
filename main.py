@@ -1,7 +1,7 @@
 from datetime import datetime
 from fastapi import FastAPI
-from DATABASE import PoemTable
-from poem.models import Poem
+from detabase import PoemTable
+from models import Poem
 import random
 
 app = FastAPI()
@@ -9,7 +9,7 @@ app = FastAPI()
 @app.get("/")
 async def root():
     """ Get a random poem from the database """
-    poems = PoemTable.fetch()
+    poems = PoemTable.fetch(query=[{"is_verified": True}])
     count = poems.count
     lucky = random.randint(0, count-1)
     poem = poems.items[lucky]
