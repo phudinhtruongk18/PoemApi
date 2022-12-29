@@ -15,7 +15,12 @@ async def root():
     poem = poems.items[lucky]
     return poem
 
-@app.post("/add/", response_model=Poem)
+@app.post("/", response_model=Poem)
 async def post(poem: Poem):
-    res = PoemTable.put(poem.dict())
+    res = PoemTable.put(poem)
     return res
+
+@app.get("/poems")
+async def get_poems(page: int = 1):
+    poems = PoemTable.fetch(query=[{"is_verified": True}])
+    return poems.items
