@@ -3,8 +3,23 @@ from fastapi import FastAPI
 from detabase import PoemTable
 from models import Poem
 import random
+from fastapi.middleware.cors import CORSMiddleware
+
+origins = [
+    "https://phudinhtruongk18.github.io/",
+    "http://localhost:5500/"
+]
 
 app = FastAPI()
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 async def root():
