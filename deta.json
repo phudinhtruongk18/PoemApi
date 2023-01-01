@@ -1,0 +1,14 @@
+{
+    "name": "Poem service",
+    "description": "Demo service for Deta Cloud",
+    "runtime": "python3.9",
+    "env": [
+        {
+            "key": "PROJECT_KEY",
+            "description": "Secret project key from Deta",
+            "value": null,
+            "required": true
+        }
+    ],
+    "cron": "None implement (for eg. 3 minutes)"
+}

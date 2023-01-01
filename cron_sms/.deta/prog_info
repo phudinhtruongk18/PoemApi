@@ -1,0 +1,1 @@
+{"id":"60874b96-1d96-4b9b-8046-5070d8d8bcb2","space":45167,"runtime":"python3.9","name":"cron_sms","path":"0awvlk","project":"a03ipipl","account":"144798365827","region":"eu-central-1","deps":["python-dotenv==0.1.5","deta==1.1.0","twilio==6.29.1"],"envs":null,"public":true,"log_level":"debug","cron":"1 minute"}
