@@ -36,3 +36,8 @@ async def post(poem: Poem):
 async def get_poems(page: int = 1):
     poems = PoemTable.fetch(query=[{"is_verified": True}])
     return poems.items
+
+@app.get("/poems/{id}")
+async def get_poem(id: str):
+    poem = PoemTable.get(id)
+    return poem
