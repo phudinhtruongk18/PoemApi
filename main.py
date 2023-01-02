@@ -29,7 +29,7 @@ async def root():
 
 @app.post("/", response_model=Poem)
 async def post(poem: Poem):
-    res = PoemTable.put(poem)
+    res = PoemTable.put(poem.dict())
     return res
 
 @app.get("/poems")
