@@ -1,3 +1,6 @@
+# No more free stuff
+"Important Notice: Apps will run on Deta Cloud until May 1, 2023 4:00 PM UTC+1." - from https://deta.space/from-cloud
+
 # Poems Api <a href="https://phudinhtruongk18.github.io/poets-typewriter/"> Click here </a>
 <a href="https://github.com/phudinhtruongk18/poets-typewriter"> Poets Typewriter </a> is a simple poems api, it's a demo project for <a href="https://www.deta.sh/">Deta</a> Clound demo project
 
